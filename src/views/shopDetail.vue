@@ -1,14 +1,14 @@
 <template>
     <div class="my">
-        hahh
-        <tabbar></tabbar> 
+        <navigator title="商品详情"></navigator>
+        
     </div>
 </template>
 
 <script>
-import tabbar from '../components/tabbar.vue'
+import navigator from '../components/navigator.vue'
 export default {
-    name: 'shop-my',
+    name: 'shop-detail',
     data() {
         return {
             
@@ -26,7 +26,7 @@ export default {
         
     },
     components: {
-        tabbar
+        navigator
     }
 }
 </script>

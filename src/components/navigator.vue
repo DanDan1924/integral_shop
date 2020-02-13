@@ -2,7 +2,7 @@
 <template>
     <div class="navBar">
         <span class="left"><img src="../assets/images/fh.png" alt="返回"></span>
-        <span>积分商城</span>
+        <span>{{title}}</span>
         <span class="right"><img src="../assets/images/kf.png" alt=""></span>
     </div>
 </template>
@@ -11,6 +11,7 @@
 export default {
     name: 'navigator',
     props:{
+        title:String
         // active:Number
     },
     data(){

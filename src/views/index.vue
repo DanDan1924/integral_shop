@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-        <navigator></navigator>
+        <navigator title="积分商城"></navigator>
         <tabbar></tabbar> 
         <van-swipe class="my-swipe" :autoplay="3000" :show-indicators="false" @change="onChange">
             <van-swipe-item class="van-swipe-item" v-for="(image, index) in images" :key="index">
@@ -44,47 +44,15 @@
                 <img class="image" src="../assets/images/index_flex/qcyp.png" alt="">
                 <p>汽车用品</p>
             </div>
-        </div>          
+        </div>   
+         <!--签到积分  -->
+        <div class="ad-show">
+            <img src="../assets/images/index/qdrk.png" alt="">
+        </div>  
+        <!-- 商品列表 -->
+        <div class=""></div>
     </div>
 </template>
-
-<script>
-import tabbar from '../components/tabbar.vue'
-import navigator from '../components/navigator.vue'
-import img1 from '../assets/images/banner/banner.png'
-
-export default {
-    name: 'shop-index',
-    data() {
-        return {
-            images: [
-                img1,
-                img1,
-                img1
-            ],
-            current: 0            
-        }
-    },
-    created() {
-        // if (this.$route.query.from == 'ucrm') {
-        //     this.showHead = true
-        // }
-
-        // this.loasList('created')
-        // this.loasType()
-    },
-    methods: {
-        onChange(index) {
-            this.current = index;
-        }
-    },
-    components: {
-        tabbar,
-        navigator
-    }
-}
-</script>
-
 <style lang="less" scoped>
 .my-swipe{
     width: 345px;
@@ -132,10 +100,62 @@ export default {
         // flex:1;
         width: 25%;
         text-align: center;
+        font-size: 13px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         .image{
             width:35%;
+            height: 35px;
+            margin-top: 10px;
         }
     }
 }
+.ad-show{   
+    padding: 10px 10px 8px;
+    background-color: rgba(204, 204, 204,0.26);
+    width: 100%;
+    box-sizing: border-box;
+    img{
+        width: 100%;
+    }
+}
 </style>
+<script>
+import tabbar from '../components/tabbar.vue'
+import navigator from '../components/navigator.vue'
+import img1 from '../assets/images/banner/banner.png'
+
+export default {
+    name: 'shop-index',
+    data() {
+        return {
+            images: [
+                img1,
+                img1,
+                img1
+            ],
+            current: 0            
+        }
+    },
+    created() {
+        // if (this.$route.query.from == 'ucrm') {
+        //     this.showHead = true
+        // }
+
+        // this.loasList('created')
+        // this.loasType()
+    },
+    methods: {
+        onChange(index) {
+            this.current = index;
+        }
+    },
+    components: {
+        tabbar,
+        navigator
+    }
+}
+</script>
+
+
 
