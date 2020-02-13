@@ -5,20 +5,15 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 本地运行
 ```
-npm run serve
+npm run dev
 ```
-
-### Compiles and minifies for production
+### 测试环境打包
 ```
-npm run build
+npm run build:test
 ```
-
-### Lints and fixes files
+### 正式环境打包
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+npm run build:pro 	
+```	

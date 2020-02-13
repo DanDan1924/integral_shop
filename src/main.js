@@ -15,8 +15,13 @@ new Vue({
 // 按需加载vant组件 start
 import { 
   Tabbar, 
-  TabbarItem
+  TabbarItem,
+  Swipe, SwipeItem,
+  Lazyload  
 } from "vant";
 Vue.use(Tabbar)
 .use(TabbarItem)
+.use(Swipe)
+.use(SwipeItem)
+.use(Lazyload)
 // 按需加载vant组件 end
