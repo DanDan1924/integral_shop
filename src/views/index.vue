@@ -1,7 +1,7 @@
 <template>
     <div class="index">
         <navigator title="积分商城"></navigator>
-        <tabbar></tabbar> 
+        
         <van-swipe class="my-swipe" :autoplay="3000" :show-indicators="false" @change="onChange">
             <van-swipe-item class="van-swipe-item" v-for="(image, index) in images" :key="index">
                 <img v-lazy="image" />
@@ -50,9 +50,51 @@
             <img src="../assets/images/index/qdrk.png" alt="">
         </div>  
         <!-- 商品列表 -->
-        <div class=""></div>
+        <shop-each title="精品推荐"></shop-each>
+        <shop-each title="新品推荐"></shop-each>
+        <tabbar></tabbar> 
     </div>
 </template>
+
+<script>
+import tabbar from '../components/tabbar.vue'
+import navigator from '../components/navigator.vue'
+import shopEach from '../components/shopEach.vue'
+
+import img1 from '../assets/images/banner/banner.png'
+
+export default {
+    name: 'shop-index',
+    data() {
+        return {
+            images: [
+                img1,
+                img1,
+                img1
+            ],
+            current: 0            
+        }
+    },
+    created() {
+        // if (this.$route.query.from == 'ucrm') {
+        //     this.showHead = true
+        // }
+
+        // this.loasList('created')
+        // this.loasType()
+    },
+    methods: {
+        onChange(index) {
+            this.current = index;
+        }
+    },
+    components: {
+        tabbar,
+        navigator,
+        shopEach
+    }
+}
+</script>
 <style lang="less" scoped>
 .my-swipe{
     width: 345px;
@@ -120,42 +162,5 @@
     }
 }
 </style>
-<script>
-import tabbar from '../components/tabbar.vue'
-import navigator from '../components/navigator.vue'
-import img1 from '../assets/images/banner/banner.png'
-
-export default {
-    name: 'shop-index',
-    data() {
-        return {
-            images: [
-                img1,
-                img1,
-                img1
-            ],
-            current: 0            
-        }
-    },
-    created() {
-        // if (this.$route.query.from == 'ucrm') {
-        //     this.showHead = true
-        // }
-
-        // this.loasList('created')
-        // this.loasType()
-    },
-    methods: {
-        onChange(index) {
-            this.current = index;
-        }
-    },
-    components: {
-        tabbar,
-        navigator
-    }
-}
-</script>
-
 
 

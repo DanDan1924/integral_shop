@@ -17,11 +17,16 @@ import {
   Tabbar, 
   TabbarItem,
   Swipe, SwipeItem,
-  Lazyload  
+  Lazyload,
+  Image,
+  Tab, Tabs
 } from "vant";
 Vue.use(Tabbar)
 .use(TabbarItem)
 .use(Swipe)
 .use(SwipeItem)
 .use(Lazyload)
+.use(Image)
+.use(Tab)
+.use(Tabs)
 // 按需加载vant组件 end
