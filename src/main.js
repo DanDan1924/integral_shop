@@ -20,7 +20,9 @@ import {
   Lazyload,
   Image,
   Tab, Tabs,
-  Sku
+  Card,
+  SubmitBar
+
 } from "vant";
 Vue.use(Tabbar)
 .use(TabbarItem)
@@ -30,6 +32,7 @@ Vue.use(Tabbar)
 .use(Image)
 .use(Tab)
 .use(Tabs)
-.use(Sku)
+.use(Card)
+.use(SubmitBar)
 
 // 按需加载vant组件 end
