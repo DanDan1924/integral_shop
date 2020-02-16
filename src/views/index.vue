@@ -121,7 +121,7 @@ export default {
             width: 5px;
             height: 5px;
             margin: 0 3px;
-            background-color: #ccc;
+            background-color: #f1f1f1;
             display: inline-block;
             border-radius: 50%;
         }

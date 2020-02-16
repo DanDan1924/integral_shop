@@ -1,7 +1,7 @@
 
 <template>
     <div class="tabbar">
-        <van-tabbar v-model="active" route>
+        <van-tabbar v-model="active" route class="tabbar-fixed">
             <van-tabbar-item replace to="/">
                 <span>主页</span>
                 <img slot="icon" v-if="active==0"  src='../assets/images/index_active.png' alt="">
@@ -45,5 +45,8 @@ export default {
 <style lang="less" scoped>
     .tabbar{
         height: 50px;
+    }
+    .tabbar-fixed{
+        box-shadow: 0 0 10px #ccc;
     }
 </style>

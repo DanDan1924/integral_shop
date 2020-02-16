@@ -49,7 +49,7 @@
         .each {
             margin-bottom:15px;
             .image-p {
-                border: 1px solid #ccc;
+                border: 1px solid #f1f1f1;
                 width: 111px;
                 height: 120px;
             }

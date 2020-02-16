@@ -19,7 +19,8 @@ import {
   Swipe, SwipeItem,
   Lazyload,
   Image,
-  Tab, Tabs
+  Tab, Tabs,
+  Sku
 } from "vant";
 Vue.use(Tabbar)
 .use(TabbarItem)
@@ -29,4 +30,6 @@ Vue.use(Tabbar)
 .use(Image)
 .use(Tab)
 .use(Tabs)
+.use(Sku)
+
 // 按需加载vant组件 end
