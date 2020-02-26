@@ -3,12 +3,15 @@
     <div class="shop-each">
         <div class="title">
             {{title}}
-            <p class="more">
+            <p class="more" >
+                <router-link :to="{path:'shopList'}">
                 <img class="more-img" src="../assets/images/more.png" alt="" />
+                </router-link>
             </p>
         </div>
         <div class="content">
             <div class="each" v-for="(each, index) in list" :key="index">
+                <router-link :to="{path:'shopDetail'}">
                 <van-image 
                     class="image-p"
                     fit="cover"
@@ -19,7 +22,9 @@
                     <span class="price-num">{{ each.price }}</span
                     >积分
                 </div>
+                </router-link>
             </div>
+            
         </div>
     </div>
 </template>

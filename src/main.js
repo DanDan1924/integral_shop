@@ -14,6 +14,9 @@ new Vue({
 
 // 按需加载vant组件 start
 import { 
+  Dialog,
+  Popup,
+  Toast,
   Tabbar, 
   TabbarItem,
   Swipe, SwipeItem,
@@ -21,10 +24,18 @@ import {
   Image,
   Tab, Tabs,
   Card,
-  SubmitBar
+  SubmitBar,
+  Sku,
+  AddressEdit,
+  AddressList,
+  Calendar
 
 } from "vant";
-Vue.use(Tabbar)
+Vue
+.use(Dialog)
+.use(Popup)
+.use(Toast)
+.use(Tabbar)
 .use(TabbarItem)
 .use(Swipe)
 .use(SwipeItem)
@@ -34,5 +45,10 @@ Vue.use(Tabbar)
 .use(Tabs)
 .use(Card)
 .use(SubmitBar)
+.use(Sku)
+.use(AddressEdit)
+.use(AddressList)
+.use(Calendar)
+
 
 // 按需加载vant组件 end

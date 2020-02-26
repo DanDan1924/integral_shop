@@ -16,7 +16,7 @@ module.exports = {
         less: {
           modifyVars: {
             // 'hack': `true; @import "${resolve('./src/assets/style/common.less')}";`
-            'gradient-red': 'linear-gradient(to right, #6699ff, #0099ff)',
+            'gradient-red': 'linear-gradient(to right, #6699ff, #0099ff)'
           }
         }
       }

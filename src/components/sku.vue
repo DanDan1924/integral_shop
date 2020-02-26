@@ -1,7 +1,7 @@
 
 <template>
-    <div class="sku">
-        <div class="bg"></div>
+    <div class="sku" v-if="isSku">
+        <div class="bg" @click="toSku"></div>
         <div class="sku-contain">
             <span class="title">支付价格</span>   
             <div class="sku-list"><span>760积分+10元</span></div>
@@ -12,11 +12,55 @@
                     <img src="../assets/images/shop/zj_1.png" alt="">
                 </div>
             </div>
-            <button class="commit">立即兑换</button>
+            <button class="commit" @click="toSubmit">立即兑换</button>
         </div>
         
     </div>
 </template>
+
+<script>
+
+export default {
+    name: "sku",
+    props: {
+        // active:Number
+        title:String,
+        isSku:Boolean
+    },
+    data() {
+        return {
+            list: [
+                {
+                    img: 'https://img.yzcdn.cn/vant/cat.jpeg',
+                    title: "木头装饰摆件",
+                    price: 6000
+                },
+                {
+                    img: 'https://img.yzcdn.cn/vant/cat.jpeg',
+                    title: "木头装饰摆件",
+                    price: 6000
+                },
+                {
+                    img: 'https://img.yzcdn.cn/vant/cat.jpeg',
+                    title: "木头装饰摆件",
+                    price: 6000
+                }
+            ]
+        };
+    },
+    beforeMount() {},
+    components: {},
+    methods:{
+        toSku(){
+            this.$emit("changeSku");   
+        },
+        toSubmit(){
+            this.$router.push({path:'/submit'})
+        }
+    }
+};
+</script>
+
 <style lang="less" scoped>
 .sku{
     position: fixed;
@@ -95,36 +139,3 @@
     // left: 0;
 }
 </style>
-<script>
-
-export default {
-    name: "sku",
-    props: {
-        // active:Number
-        title:String
-    },
-    data() {
-        return {
-            list: [
-                {
-                    img: 'https://img.yzcdn.cn/vant/cat.jpeg',
-                    title: "木头装饰摆件",
-                    price: 6000
-                },
-                {
-                    img: 'https://img.yzcdn.cn/vant/cat.jpeg',
-                    title: "木头装饰摆件",
-                    price: 6000
-                },
-                {
-                    img: 'https://img.yzcdn.cn/vant/cat.jpeg',
-                    title: "木头装饰摆件",
-                    price: 6000
-                }
-            ]
-        };
-    },
-    beforeMount() {},
-    components: {}
-};
-</script>

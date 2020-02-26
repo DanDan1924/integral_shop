@@ -39,13 +39,17 @@
             </div>          
         </div>
         <div class="my-list">
-            <div class="my-list-each" v-for="(item,index) in myList" :key="index"> 
-                <img class="list-icon" :src="item.icon" alt="">
-                <div class="list-right">
-                    <p>{{item.info}}</p>
-                    <img class="right-icon" src="../assets/images/my/youjiantou.jpg" alt="">
-                </div>
+            
+            <div v-for="(item,index) in myList" :key="index"  > 
+                <router-link class="my-list-each" :to="{path:item.url}">
+                    <img class="list-icon" :src="item.icon" alt="">
+                    <div class="list-right">
+                        <p>{{item.info}}</p>
+                        <img class="right-icon" src="../assets/images/my/youjiantou.jpg" alt="">
+                    </div>
+                </router-link>
             </div>
+            
         </div>
         <tabbar></tabbar>
     </div>
@@ -95,18 +99,22 @@ export default {
                 {
                     icon:myImg1,
                     info:'积分记录',
+                    url:"/sign"
                 },
                 {
                     icon:myImg2,
-                    info:'积分订单',
+                    info:'购物车',
+                    url:"/my"
                 },
                 {
                     icon:myImg3,
                     info:'联系客服',
+                    url:"/my"
                 },
                 {
                     icon:myImg4,
                     info:'设置收货地址',
+                    url:'/addressManage'
                 },
             ],
         };
@@ -118,7 +126,9 @@ export default {
         // this.loasList('created')
         // this.loasType()
     },
-    methods: {},
+    methods: {
+
+    },
     components: {
         tabbar
     }
@@ -162,6 +172,7 @@ export default {
     }
     .bg-image{
         position: absolute;
+        width: 100%;
     }
     .portrait{
         width: 56px;
