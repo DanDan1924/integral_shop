@@ -11,53 +11,57 @@
             </div>               
         </van-swipe>  
         <!-- flex -->
-        <div class="flex-contain">
-            <div class="each-flex">
+        <div class="flex-contain" @click="toList">
+            <div class="each-flex" >
                 <img class="image" src="../assets/images/index_flex/jjgh.png" alt="">
                 <p>家居个护</p>
             </div>
-            <div class="each-flex">
+            <div class="each-flex" @click="toList">
                 <img class="image" src="../assets/images/index_flex/slbg.png" alt="">
                 <p>商旅办公</p>
             </div>
-            <div class="each-flex">
+            <div class="each-flex" @click="toList">
                 <img class="image" src="../assets/images/index_flex/jzjj.png" alt="">
                 <p>家装厨具</p>
             </div>
-            <div class="each-flex">
+            <div class="each-flex" @click="toList">
                 <img class="image" src="../assets/images/index_flex/hwyd.png" alt="">
                 <p>户外运动</p>
             </div>
-            <div class="each-flex">
+            <div class="each-flex" @click="toList">
                 <img class="image" src="../assets/images/index_flex/smsh.png" alt="">
                 <p>数码生活</p>
             </div>
-            <div class="each-flex">
+            <div class="each-flex" @click="toList">
                 <img class="image" src="../assets/images/index_flex/mywj.png" alt="">
                 <p>母婴玩具</p>
             </div>
-            <div class="each-flex">
+            <div class="each-flex" @click="toList">
                 <img class="image" src="../assets/images/index_flex/jfjs.png" alt="">
                 <p>家纺家饰</p>
             </div>
-            <div class="each-flex">
+            <div class="each-flex" @click="toList">
                 <img class="image" src="../assets/images/index_flex/qcyp.png" alt="">
                 <p>汽车用品</p>
             </div>
         </div>   
          <!--签到积分  -->
-        <div class="ad-show">
-            <img src="../assets/images/index/qdrk.png" alt="">
-        </div>  
+        <router-link to="/sign">
+            <div class="ad-show" >
+                
+                    <img src="../assets/images/index/qdrk.png" alt="">
+                
+            </div>  
+        </router-link>
         <!-- 商品列表 -->
         <shop-each title="精品推荐"></shop-each>
         <shop-each title="新品推荐"></shop-each>
-        <tabbar></tabbar> 
+        <!-- <tabbar></tabbar>  -->
     </div>
 </template>
 
 <script>
-import tabbar from '../components/tabbar.vue'
+// import tabbar from '../components/tabbar.vue'
 import navigator from '../components/navigator.vue'
 import shopEach from '../components/shopEach.vue'
 
@@ -86,10 +90,13 @@ export default {
     methods: {
         onChange(index) {
             this.current = index;
-        }
+        },
+        toList() {
+            this.$router.push({path:'/shopList'})
+        },
     },
     components: {
-        tabbar,
+        // tabbar,
         navigator,
         shopEach
     }

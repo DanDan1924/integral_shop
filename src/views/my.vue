@@ -51,12 +51,12 @@
             </div>
             
         </div>
-        <tabbar></tabbar>
+        <!-- <tabbar></tabbar> -->
     </div>
 </template>
 
 <script>
-import tabbar from "../components/tabbar.vue"
+// import tabbar from "../components/tabbar.vue"
 // 图片
 import portrait from "../assets/images/my/portrait.png";
 import orderImg1 from "../assets/images/my/dfk.png";
@@ -130,7 +130,7 @@ export default {
 
     },
     components: {
-        tabbar
+        // tabbar
     }
 };
 </script>

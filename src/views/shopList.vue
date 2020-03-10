@@ -9,6 +9,15 @@
         >
             <van-tab>
                 <div slot="title" class="shop-list-tab">推荐</div>
+                <div class="error">
+                    <img src="https://pic.uhouzz.com/Avatar/20181210/584920b960fe3eaaaa4f16aadfee23c5oss.jpg" alt="">
+                    <p>竟然什么也没找到</p>
+                    <p>这大概是个慌无人烟的小岛吧...</p>
+                </div>
+                
+            </van-tab>
+            <van-tab>
+                <div slot="title" class="shop-list-tab">积分</div>
                 <div
                     class="shop-list-each"
                     v-for="(item, index) in list"
@@ -24,10 +33,6 @@
                         <p>市场价：{{ item.realPrice }}元</p>
                     </div>
                 </div>
-            </van-tab>
-            <van-tab>
-                <div slot="title" class="shop-list-tab">积分</div>
-                内容 2
             </van-tab>
         </van-tabs>
     </div>
@@ -106,6 +111,15 @@ export default {
         }
     }
     
+}
+.error{
+    margin-top: 50px;
+    text-align: center;
+    img{
+        width: 250px;
+        height: auto;
+        margin-bottom: 15px;
+    }
 }
 </style>
 
